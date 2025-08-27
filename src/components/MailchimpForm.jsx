@@ -1,5 +1,5 @@
 import MailchimpSubscribe from "react-mailchimp-subscribe";
-import { Newsletter } from "../components/Newsletter";
+import { Newsletter } from "./Newsletter";
 
 export const MailchimpForm = () => {
   // Anda perlu mengganti ini dengan URL Mailchimp Anda sendiri.

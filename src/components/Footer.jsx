@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import { MailchimpForm } from "../context/MailchimpForm"; // <-- Import MailchimpForm
+import { MailchimpForm } from "./MailchimpForm"; // <-- Import MailchimpForm
 import { Linkedin, Github, Instagram } from 'react-bootstrap-icons';
 
 export const Footer = () => {
