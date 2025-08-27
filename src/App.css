@@ -10,6 +10,7 @@
   --primary-color: #fdb827; /* Main Yellow */
   --accent-color: #E1A100; /* Deeper Gold */
   --primary-gradient: linear-gradient(90.21deg, #FFD700 -5.91%, #fdb827 50%, #E1A100 111.58%);
+  --skill-bx-gradient: linear-gradient(135deg, #FDFCFB 0%, #FFF5E1 100%);
   --nav-bg-scrolled: #ffffff;
   --nav-text-color: #121212;
   --card-bg-color: #ffffff;
@@ -18,7 +19,6 @@
   --social-icon-bg: rgba(0, 0, 0, 0.05);
   --social-icon-hover-bg: #000000;
   --social-icon-hover-color: #ffffff;
-  --skill-bx-gradient: linear-gradient(135deg, #fdb827 0%, #FFD700 100%);
 }
 
 /* Variabel untuk Dark Mode */
@@ -30,6 +30,7 @@ body.dark {
   --primary-color: #fdb827;
   --accent-color: #FFD700; /* Bright Gold */
   --primary-gradient: linear-gradient(90.21deg, #FFD700 -5.91%, #fdb827 50%, #E1A100 111.58%);
+  --skill-bx-gradient: linear-gradient(135deg, #242424 0%, #3a321e 100%);
   --nav-bg-scrolled: #1A1A1A;
   --nav-text-color: #ffffff;
   --card-bg-color: #242424;
@@ -38,7 +39,6 @@ body.dark {
   --social-icon-bg: rgba(217, 217, 217, 0.1);
   --social-icon-hover-bg: #ffffff;
   --social-icon-hover-color: #000000;
-  --skill-bx-gradient: linear-gradient(135deg, #242424 0%, #3a321e 100%);
 }
 
 /************ Default CSS ************/
@@ -294,7 +294,6 @@ span.navbar-text {
   position: relative;
 }
 .skill-bx {
-  /* Menggunakan gradasi kuning yang lebih terlihat */
   background: var(--skill-bx-gradient);
   border-radius: 64px;
   text-align: center;
@@ -369,11 +368,8 @@ span.navbar-text {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: var(--card-bg-color);
+  background-color: var(--bg-secondary-color);
   overflow: hidden;
-}
-.project .nav.nav-pills .nav-item {
-  width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -404,7 +400,8 @@ span.navbar-text {
     width: 100% !important;
 }
 .project .nav.nav-pills .nav-link.active {
-    border: 1px solid var(--border-color);
+    border: 1px solid transparent;
+    color: #000 !important;
 }
 .proj-imgbx {
   position: relative;
@@ -593,4 +590,106 @@ span.navbar-text {
   color: var(--text-secondary-color);
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+
+/********************************************************************************/
+/************ Responsive CSS ************/
+/********************************************************************************/
+@media (max-width: 768px) {
+  /* --- Navbar --- */
+  nav.navbar .navbar-nav {
+    margin-top: 20px;
+    text-align: center;
+  }
+  nav.navbar .navbar-nav a.nav-link.navbar-link {
+    padding: 10px 0;
+  }
+  span.navbar-text {
+    display: block;
+    text-align: center;
+  }
+  .navbar-text .social-icon {
+    display: inline-block;
+    margin: 15px 0;
+  }
+  .navbar-text button.vvd {
+    width: 100%;
+  }
+  .theme-toggle-btn {
+    margin: 10px auto;
+  }
+
+  /* --- Banner --- */
+  .banner {
+    padding: 200px 0 100px 0;
+    text-align: center;
+  }
+  .banner h1 {
+    font-size: 42px;
+  }
+  .banner p {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .banner button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .banner img {
+    margin-top: 50px;
+  }
+
+  /* --- Skills --- */
+  .skill-bx {
+    padding: 40px 20px;
+  }
+  .skill h2 {
+    font-size: 32px;
+  }
+  .skill p {
+    margin-bottom: 50px;
+  }
+  .skill-slider {
+    width: 100%;
+  }
+
+  /* --- Projects --- */
+  .project {
+    padding: 60px 0;
+  }
+  .project h2 {
+    font-size: 32px;
+  }
+  .project p {
+    width: 90%;
+  }
+  .project .nav.nav-pills {
+    width: 100%;
+    border-radius: 25px;
+  }
+
+  /* --- Contact --- */
+  .contact {
+    padding: 60px 0 100px 0;
+  }
+  .contact img {
+    margin-bottom: 40px;
+  }
+
+  /* --- Footer --- */
+  .newsletter-bx {
+    padding: 60px 25px;
+    border-radius: 40px;
+    margin-bottom: 60px;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer .logo-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer .text-sm-end {
+    text-align: center !important;
+  }
 }
