@@ -66,15 +66,18 @@ export const NavBar = () => {
           </HashLink>
         </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        {/* Mobile Menu Buttons */}
+        <div className="md:hidden flex items-center gap-4">
+          <button onClick={toggleTheme} className="p-2 rounded-full text-light-text dark:text-dark-text hover:bg-light-bg-secondary dark:hover:bg-dark-bg-secondary">
+            {theme === 'light' ? <MoonIcon className="h-6 w-6" /> : <SunIcon className="h-6 w-6 text-yellow-400" />}
+          </button>
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <XMarkIcon className="h-8 w-8 text-light-text dark:text-dark-text" /> : <Bars3Icon className="h-8 w-8 text-light-text dark:text-dark-text" />}
           </button>
         </div>
       </div>
 
-       {/* Mobile Menu */}
+       {/* Mobile Menu Dropdown */}
        {isOpen && (
         <div className="md:hidden bg-light-bg dark:bg-dark-bg px-6 pb-4 mt-2 border-t border-light-text/10 dark:border-dark-text/10">
           {navLinks.map((link) => (
@@ -96,10 +99,6 @@ export const NavBar = () => {
             <SocialIcon><CodeBracketIcon className="h-6 w-6"/></SocialIcon>
             <SocialIcon><UserGroupIcon className="h-6 w-6"/></SocialIcon>
           </div>
-           <button onClick={toggleTheme} className="w-full mt-4 p-2 rounded-full text-light-text dark:text-dark-text bg-light-bg-secondary dark:bg-dark-bg-secondary flex justify-center items-center gap-2">
-            {theme === 'light' ? <MoonIcon className="h-6 w-6" /> : <SunIcon className="h-6 w-6 text-yellow-400" />}
-            <span>Ganti Tema</span>
-          </button>
         </div>
       )}
     </nav>

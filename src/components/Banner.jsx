@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 import { ArrowRightCircleIcon } from '@heroicons/react/24/solid';
 
-const headerImg = "https://placehold.co/600x500/1A1A1A/fdb827?text=Hackta%0ACode";
+// --- INI BARIS YANG PERLU DIUBAH ---
+// Impor gambar dari lokasi lokal di folder src/assets/img
+import headerImg from "../assets/img/contact-img.svg"; 
+// Jika Anda ingin gambar background contact section juga dari lokal:
+// import contactImg from "../assets/img/contact-image.png"; 
+// Dan seterusnya untuk gambar-gambar lainnya
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -40,9 +45,13 @@ export const Banner = () => {
   }
 
   return (
-    <section className="pt-48 pb-24 text-center md:text-left" id="home">
+    <section 
+      className="pt-48 pb-24 text-center md:text-left bg-gradient-to-b from-yellow-100 to-light-bg dark:from-dark-bg-secondary dark:to-dark-bg" 
+      id="home"
+    >
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          {/* Kolom Konten Teks */}
           <div>
             <span className="font-bold text-lg tracking-wider bg-primary/10 text-primary px-4 py-2 rounded-full inline-block">
               Selamat Datang di Hackta
@@ -59,6 +68,8 @@ export const Banner = () => {
               Mari Terhubung <ArrowRightCircleIcon className="h-6 w-6" />
             </a>
           </div>
+
+          {/* Kolom Gambar */}
           <div className="animate-updown">
             <img src={headerImg} alt="Header" className="rounded-2xl shadow-2xl"/>
           </div>
