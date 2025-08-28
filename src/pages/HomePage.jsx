@@ -1,17 +1,19 @@
 import React from 'react';
-import Banner from '../components/Banner';
-import Highlights from '../components/Highlights'; // <-- Impor komponen Highlights
-import Skills from '../components/Skills';
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
+import Banner from '../sections/homepage/Banner';
+import Highlights from '../sections/homepage/Highlights';
+import Guarantees from '../sections/homepage/Guarantees'; 
+import Services from '../sections/homepage/Services';
+import Gallery from '../sections/homepage/Gallery';
+import Contact from '../sections/homepage/Contact';
 
 const HomePage = () => {
   return (
     <>
       <Banner />
-      <Highlights /> {/* <-- Tambahkan komponen Highlights di sini */}
-      <Skills />
-      <Projects />
+      <Highlights />
+      <Services />
+      <Guarantees /> 
+      <Gallery />
       <Contact />
     </>
   );

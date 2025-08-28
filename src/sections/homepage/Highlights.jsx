@@ -1,17 +1,9 @@
 import React from 'react';
 import { AcademicCapIcon, RocketLaunchIcon, GlobeAltIcon, UsersIcon } from '@heroicons/react/24/outline';
-
-const HighlightCard = ({ icon: Icon, title, description }) => {
-  return (
-    <div className="bg-light-bg dark:bg-dark-bg-secondary p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-light-text/10 dark:border-dark-text/10">
-      <div className="text-primary mb-4">
-        <Icon className="h-16 w-16 mx-auto" />
-      </div>
-      <h3 className="text-2xl font-bold mb-3 text-light-text dark:text-dark-text">{title}</h3>
-      <p className="text-light-text-secondary dark:text-dark-text-secondary text-base">{description}</p>
-    </div>
-  );
-};
+// --- INI BAGIAN YANG DIPERBAIKI ---
+// 1. Path diubah menjadi ../../components/
+// 2. Import diubah menjadi import default (tanpa kurung kurawal)
+import HighlightCard from '../../components/HighlightCard';
 
 export const Highlights = () => {
   const highlightsData = [

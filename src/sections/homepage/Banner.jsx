@@ -3,7 +3,7 @@ import { ArrowRightCircleIcon } from '@heroicons/react/24/solid';
 
 // --- INI BARIS YANG PERLU DIUBAH ---
 // Impor gambar dari lokasi lokal di folder src/assets/img
-import headerImg from "../assets/img/contact-img.svg"; 
+import headerImg from "../../assets/img/contact-img.svg"; 
 // Jika Anda ingin gambar background contact section juga dari lokal:
 // import contactImg from "../assets/img/contact-image.png"; 
 // Dan seterusnya untuk gambar-gambar lainnya
