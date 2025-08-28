@@ -1,20 +1,21 @@
+// src/pages/LayananSDPage.jsx
 import React from 'react';
-import Footer from '../components/Footer';
+import Hero from '../sections/SD/Hero'; 
+import Intro from '../sections/SD/Intro';
+import Kurikulum from '../sections/SD/Kurikulum';
+import Pricing from '../sections/SD/Pricing';
+import Testimoni from './../sections/SD/Testimoni';
 
 const LayananSDPage = () => {
   return (
     <>
-      <div className="pt-32 pb-16 bg-gradient-to-b from-amber-100/60 to-light-bg dark:from-yellow-900/20 dark:to-dark-bg-secondary text-center">
-        <h1 className="text-5xl font-bold text-light-text dark:text-dark-text mb-4">Layanan Jenjang SD</h1>
-        <p className="text-lg text-light-text-secondary dark:text-dark-text-secondary max-w-3xl mx-auto px-6">
-          Program coding yang didesain secara menyenangkan dan interaktif untuk siswa Sekolah Dasar,
-          mengembangkan logika dasar dan kreativitas digital.
-        </p>
-      </div>
-      {/* Sections for SD page go here */}
-      <Footer />
+      <Hero />
+      <Intro />
+      <Kurikulum />
+      <Pricing />
+      <Testimoni />
     </>
   );
 };
 
-export default LayananSDPage; // <-- This line was missing
+export default LayananSDPage;

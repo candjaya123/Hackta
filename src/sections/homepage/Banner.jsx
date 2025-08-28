@@ -57,7 +57,7 @@ export const Banner = () => {
               Selamat Datang di Hackta
             </span>
             <h1 className="text-5xl md:text-6xl font-bold my-4 leading-tight text-light-text dark:text-dark-text">
-              Kursus Coding untuk Level{' '}
+              Kursus Teknologi Untuk{' '}
               <span className="text-primary border-b-4 border-primary whitespace-nowrap">{text}</span>
               <span className="animate-ping text-primary">|</span>
             </h1>
