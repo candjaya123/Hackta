@@ -1,61 +1,41 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
-// Ganti dengan path gambar Anda atau gunakan placeholder
-const meterImg = "https://placehold.co/150x150/fdb827/000000?text=95%25";
-const colorSharp = "https://placehold.co/1920x1080/000000/111111?text=.";
+const meterImg = "https://placehold.co/150x150/fdb827/1A1A1A?text=95%25";
 
 export const Skills = () => {
   const responsive = {
-    superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
   };
 
   return (
-    <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Keahlian Unggulan</h2>
-                        <p>Fokus kami pada teknologi yang paling dibutuhkan di industri saat ini, <br></br> memastikan siswa kami siap berkarir.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meterImg} alt="Skill Meter" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meterImg} alt="Skill Meter" />
-                                <h5>Mobile Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meterImg} alt="Skill Meter" />
-                                <h5>UI/UX Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meterImg} alt="Skill Meter" />
-                                <h5>Data Science</h5>
-                            </div>
-                        </Carousel>
+    <section className="py-20" id="skills">
+        <div className="container mx-auto px-6">
+            <div className="bg-light-bg-secondary dark:bg-dark-bg-secondary rounded-[64px] text-center p-10 md:p-16 -mt-24 shadow-xl">
+                <h2 className="text-4xl font-bold mb-4">Keahlian Unggulan</h2>
+                <p className="text-light-text-secondary dark:text-dark-text-secondary text-lg mb-12">Fokus kami pada teknologi yang paling dibutuhkan di industri saat ini.</p>
+                <Carousel responsive={responsive} infinite={true} className="w-full">
+                    <div className="item p-4">
+                        <img src={meterImg} alt="Skill Meter" className="w-1/2 mx-auto mb-4"/>
+                        <h5 className="text-xl font-semibold">Web Development</h5>
                     </div>
-                </div>
+                    <div className="item p-4">
+                        <img src={meterImg} alt="Skill Meter" className="w-1/2 mx-auto mb-4"/>
+                        <h5 className="text-xl font-semibold">Mobile Development</h5>
+                    </div>
+                    <div className="item p-4">
+                        <img src={meterImg} alt="Skill Meter" className="w-1/2 mx-auto mb-4"/>
+                        <h5 className="text-xl font-semibold">UI/UX Design</h5>
+                    </div>
+                    <div className="item p-4">
+                        <img src={meterImg} alt="Skill Meter" className="w-1/2 mx-auto mb-4"/>
+                        <h5 className="text-xl font-semibold">Data Science</h5>
+                    </div>
+                </Carousel>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Background" />
     </section>
   )
 }

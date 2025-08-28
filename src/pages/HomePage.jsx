@@ -1,6 +1,4 @@
 import React from 'react';
-
-// Import komponen-komponen yang membentuk halaman utama
 import Banner from '../components/Banner';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';

@@ -1,11 +1,7 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import { ArrowRightCircleIcon } from '@heroicons/react/24/solid';
 
-// Ganti dengan path gambar Anda sendiri atau gunakan placeholder
-const headerImg = "https://placehold.co/600x500/000000/fdb827?text=Hackta\\nCode";
+const headerImg = "https://placehold.co/600x500/1A1A1A/fdb827?text=Hackta%0ACode";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -19,7 +15,6 @@ export const Banner = () => {
     let ticker = setInterval(() => {
       tick();
     }, delta);
-
     return () => { clearInterval(ticker) };
   }, [text])
 
@@ -45,32 +40,32 @@ export const Banner = () => {
   }
 
   return (
-    <section className="banner" id="home">
-      <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Selamat Datang di Hackta</span>
-                <h1>{`Kursus Coding untuk Level `} <span className="txt-rotate" data-period="1000" data-rotate='[ "SD", "SMP", "SMA", "Mahasiswa" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Membuka potensi digital generasi muda Indonesia melalui kurikulum standar industri, mentor berpengalaman, dan proyek dunia nyata yang menantang.</p>
-                  <button onClick={() => console.log('connect')}>Mari Terhubung <ArrowRightCircle size={25} /></button>
-              </div>}
-            </TrackVisibility>
-          </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
+    <section className="pt-48 pb-24 text-center md:text-left" id="home">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+          <div>
+            <span className="font-bold text-lg tracking-wider bg-primary/10 text-primary px-4 py-2 rounded-full inline-block">
+              Selamat Datang di Hackta
+            </span>
+            <h1 className="text-5xl md:text-6xl font-bold my-4 leading-tight text-light-text dark:text-dark-text">
+              Kursus Coding untuk Level{' '}
+              <span className="text-primary border-b-4 border-primary whitespace-nowrap">{text}</span>
+              <span className="animate-ping text-primary">|</span>
+            </h1>
+            <p className="text-lg md:text-xl mb-8 text-light-text/70 dark:text-dark-text/70">
+              Membuka potensi digital generasi muda Indonesia melalui kurikulum standar industri dan proyek dunia nyata.
+            </p>
+            <a href="#connect" className="inline-flex items-center gap-2 bg-primary text-black font-bold py-4 px-8 rounded-full text-lg hover:bg-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Mari Terhubung <ArrowRightCircleIcon className="h-6 w-6" />
+            </a>
+          </div>
+          <div className="animate-updown">
+            <img src={headerImg} alt="Header" className="rounded-2xl shadow-2xl"/>
+          </div>
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default Banner;
