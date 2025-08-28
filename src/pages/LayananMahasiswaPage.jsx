@@ -13,6 +13,7 @@ const LayananMahasiswaPage = () => {
       <Kurikulum />
       <Pricing />
       <Testimoni />
+      
     </>
   );
 };
