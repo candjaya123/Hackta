@@ -9,18 +9,18 @@ export const Highlights = () => {
   const highlightsData = [
     {
       icon: AcademicCapIcon,
-      title: "Kurikulum Terkini",
+      title: "Materi Terupdate",
       description: "Materi belajar yang selalu diperbarui sesuai standar industri dan tren teknologi terbaru."
     },
     {
       icon: RocketLaunchIcon,
-      title: "Proyek Nyata",
+      title: "Berbasis Proyek",
       description: "Bangun portofolio kuat dengan proyek-proyek yang relevan dengan dunia industri dan startup."
     },
     {
       icon: GlobeAltIcon,
-      title: "Akses Global",
-      description: "Terhubung dengan komunitas developer global dan raih peluang karir internasional."
+      title: "Akses Komunitas",
+      description: "Terhubung dengan komunitas developer teknologi dan raih beragam peluang."
     },
     {
       icon: UsersIcon,
@@ -33,10 +33,10 @@ export const Highlights = () => {
     <section className="py-24 bg-light-bg-secondary dark:bg-dark-bg-secondary" id="highlights">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold mb-6 text-light-text dark:text-dark-text">
-          Mengapa Memilih <span className="text-primary">Hackta</span>?
+          Mengapa Harus <span className="text-primary">Hackta</span>?
         </h2>
         <p className="text-lg md:text-xl mb-16 max-w-3xl mx-auto text-light-text-secondary dark:text-dark-text-secondary">
-          Kami berkomitmen memberikan pendidikan coding terbaik yang relevan dengan kebutuhan masa depan.
+          Kami berkomitmen memberikan pelatihan teknologi terbaik yang relevan dengan kebutuhan masa depan untuk berbagai kalangan.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

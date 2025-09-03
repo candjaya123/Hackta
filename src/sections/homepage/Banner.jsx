@@ -62,10 +62,10 @@ export const Banner = () => {
               <span className="animate-ping text-primary">|</span>
             </h1>
             <p className="text-lg md:text-xl mb-8 text-light-text/70 dark:text-dark-text/70">
-              Membuka potensi digital generasi muda Indonesia melalui kurikulum standar industri dan proyek dunia nyata.
+              Saatnya ciptakan Indonesia yang kreatif, mandiri, dan siap bersaing di dunia teknologi.
             </p>
             <a href="#connect" className="inline-flex items-center gap-2 bg-primary text-black font-bold py-4 px-8 rounded-full text-lg hover:bg-accent transition-all duration-300 transform hover:scale-105 shadow-lg">
-              Mari Terhubung <ArrowRightCircleIcon className="h-6 w-6" />
+              Hubungi Kami <ArrowRightCircleIcon className="h-6 w-6" />
             </a>
           </div>
 

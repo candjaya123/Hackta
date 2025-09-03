@@ -1,20 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const ServiceCard = ({ title, description, imgUrl }) => {
+const ServiceCard = ({ title, description, imgUrl, slug }) => {
   return (
-    <div className="group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-2">
+    <Link to={`/layanan/${slug}`} className="group relative overflow-hidden rounded-3xl cursor-pointer shadow-lg hover:shadow-primary/30 transition-all duration-300 transform hover:-translate-y-2 block">
+      {/* Image with hover effect */}
       <img src={imgUrl} alt={title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
       
-      {/* Overlay gradasi yang muncul saat hover */}
-      <div className="absolute inset-0 bg-gradient-to-t from-primary via-accent to-transparent opacity-0 group-hover:opacity-90 transition-opacity duration-500 p-6 flex flex-col justify-end">
+      {/* Overlay gradasi yang sekarang selalu terlihat di bagian bawah 
+        untuk memastikan judul selalu terbaca.
+      */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-6 flex flex-col justify-end">
         
-        {/* Konten teks yang muncul dari bawah */}
-        <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-          <h4 className="text-black text-2xl font-bold">{title}</h4>
-          <span className="text-black text-lg italic">{description}</span>
+        {/* Konten teks */}
+        <div className="transform transition-transform duration-500">
+          {/* Judul yang selalu terlihat */}
+          <h4 className="text-white text-2xl font-bold">{title}</h4>
+          
+          {/* Deskripsi yang hanya muncul saat hover */}
+          <span className="text-white/80 text-lg italic block mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {description}
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

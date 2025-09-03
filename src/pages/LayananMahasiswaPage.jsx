@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../sections/Mahasiswa/Hero.jsx';
+import Hero from '../sections/Mahasiswa/Hero';
 import Intro from '../sections/Mahasiswa/Intro';
 import Kurikulum from '../sections/Mahasiswa/Kurikulum';
 import Pricing from '../sections/Mahasiswa/Pricing';
@@ -13,7 +13,6 @@ const LayananMahasiswaPage = () => {
       <Kurikulum />
       <Pricing />
       <Testimoni />
-
     </>
   );
 };
